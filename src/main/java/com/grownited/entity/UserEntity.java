@@ -2,8 +2,19 @@ package com.grownited.entity;
 
 import java.util.Date;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity //create table UserEntity -> users 
+@Table(name="users")//table name users
 public class UserEntity {
 
+	@Id//primary key 
+	@GeneratedValue(strategy = GenerationType.IDENTITY)//auto increment 
 	private Integer userId;
 	private String firstName;
 	private String lastName;
