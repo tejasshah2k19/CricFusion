@@ -36,5 +36,11 @@ public class StateController {
 		model.addAttribute("states",allState);//send to jsp 
 		return "ListState";
 	}
+	
+	@GetMapping("deletestate")
+	public String deleteState(Integer stateId) {
+		stateRepository.deleteById(stateId);
+		return "redirect:/liststate";//do not open jsp , redirect to list{url}
+	}
 
 }

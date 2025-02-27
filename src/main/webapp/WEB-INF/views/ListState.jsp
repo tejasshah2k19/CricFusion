@@ -16,12 +16,14 @@
 		<tr>
 			<th>StateId</th>
 			<th>StateName</th>
+			<th>Action</th>
 		</tr>
 		
 		<c:forEach items="${states}" var="s">
 			<tr>
-				<td>${s.stateId }</td>
+				<td>${s.stateId}</td>
 				<td>${s.stateName }</td>
+				<td><a href="deletestate?stateId=${s.stateId}">Delete</a></td>
 			</tr>
 		</c:forEach>
 	
