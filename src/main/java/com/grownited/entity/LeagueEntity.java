@@ -25,7 +25,8 @@ public class LeagueEntity {
 	private Integer userId;// foreign key
 	private String ballType;
 	private Boolean active;// allow team to join leauge
-
+	private Integer stateId; //fk 
+	
 	public Integer getLeagueId() {
 		return leagueId;
 	}
@@ -112,6 +113,14 @@ public class LeagueEntity {
 
 	public void setActive(Boolean active) {
 		this.active = active;
+	}
+
+	public Integer getStateId() {
+		return stateId;
+	}
+
+	public void setStateId(Integer stateId) {
+		this.stateId = stateId;
 	}
 
 }

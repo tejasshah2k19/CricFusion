@@ -28,6 +28,7 @@
 						<th>LeaugeTitle</th>
 						<th>Location</th>
 						<th>MaxParticipantTeam</th>
+						<th>State</th>
 					</tr>
 
 					<c:forEach items="${allLeauge}" var="l">
@@ -35,6 +36,7 @@
 							<td>${l.leaugeTitle }</td>
 							<td>${l.location }</td>
 							<td>${l.maxParticipantTeam }</td>
+							<td>${l.stateId }</td>
 						</tr>
 					</c:forEach>
 

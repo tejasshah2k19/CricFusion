@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
+     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,7 +47,22 @@ input, select, button {
 		<label for="leagueTitle">League Title:</label> <input type="text"
 			id="leagueTitle" name="leaugeTitle" required /> <label
 			for="location">Location:</label> <input type="text" id="location"
-			name="location" required /> <label for="overs">Overs:</label> <input
+			name="location" required /> 
+			
+
+		<label
+			for="location">State:</label>
+			<select name="stateId">
+				<option>Select State</option>
+				<c:forEach items="${allState}" var="s">
+					<option value="${s.stateId}">${s.stateName}</option>
+				</c:forEach>
+				
+				
+				
+			</select>			
+			
+			<label for="overs">Overs:</label> <input
 			type="number" id="overs" name="overs" required min="1" /> <label
 			for="maxParticipantTeam">Max Participant Team:</label> <input
 			type="number" id="maxParticipantTeam" name="maxParticipantTeam"
